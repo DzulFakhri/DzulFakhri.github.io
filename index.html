@@ -1,522 +1,592 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="img/icon.png" type="image/png">
-        <title>Dzulfikar Fakhri Personal Website</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/animate-css/animate.css">
-        <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
-        <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-        <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-    </head>
-    <body>
-        
-        <!--================Header Menu Area =================-->
-        <header class="header_area">
-            <div class="main_menu">
-            	<nav class="navbar navbar-expand-lg navbar-light">
-					<div class="container box_1620">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="index.html">My Personal Website</a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item active"><a class="nav-link" href="#banner">Home</a></li> 
-								<li class="nav-item"><a class="nav-link" href="#about">About</a></li> 
-								<li class="nav-item"><a class="nav-link" href="#tab">Education</a></li>
-								<li class="nav-item"><a class="nav-link" href="#tab">Experiences</a></li>
-								<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li> 
-								<li class="nav-item"><a class="nav-link" href="#socmed">Social Media</a></li>
-							</ul>
-						</div> 
-					</div>
-            	</nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dzulfikar Fakhri Azmi — Research Engineer specialising in avionics, embedded systems, and IoT. Based in Surabaya, Indonesia.">
+  <link rel="icon" href="img/icon.png" type="image/png">
+  <title>Dzulfikar Fakhri Azmi — Personal Website</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css"><!-- always last -->
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAVBAR
+     ════════════════════════════════════════════════════════ -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar__brand">My Personal Website</div>
+
+  <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="nav-menu" id="navMenu" role="menubar">
+    <a href="#about"      role="menuitem">About</a>
+    <a href="#career"     role="menuitem">Experience</a>
+    <a href="#portfolio"  role="menuitem">Portfolio</a>
+    <a href="#gallery"    role="menuitem">Gallery</a>
+    <a href="#skills"     role="menuitem">Skills</a>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════════
+     HERO — Profile Card (original design, unchanged)
+     ════════════════════════════════════════════════════════ -->
+<div class="page-hero">
+  <section class="hero-section" aria-label="Profile">
+
+    <!-- ══ PROFILE CARD ══ -->
+    <div class="profile-card">
+
+      <img
+        src="img/profile.jpg"
+        alt="Dzulfikar Fakhri Azmi"
+        class="profile-card__photo"
+        onerror="this.style.display='none'; document.querySelector('.profile-card__photo-fallback').style.display='flex';"
+      >
+      <div class="profile-card__photo-fallback" aria-hidden="true">DFA</div>
+
+      <div class="profile-card__body">
+        <div class="profile-card__eyebrow">Hello Everybody, I Am</div>
+        <h1 class="profile-card__name">Dzulfikar Fakhri Azmi</h1>
+        <div class="profile-card__role">Research Engineer</div>
+
+        <p class="profile-card__bio">
+          Nice to meet you, welcome to my personal website. Enjoy this page and feel free to contact me. Thank you for your visit.
+        </p>
+
+        <div class="profile-card__contacts">
+          <a class="contact-line" href="mailto:dzulfakhri8201@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            dzulfakhri8201@gmail.com
+          </a>
+          <a class="contact-line" href="https://maps.app.goo.gl/6PuPCAnr2HgwmW2j7" target="_blank" rel="noopener" aria-label="Address">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Jl. Karangan Mulya 1/22
+          </a>
+        </div>
+
+        <div class="profile-card__socials" aria-label="Social media links">
+          <a class="social-btn" href="https://www.instagram.com/dzulfi_fakhri/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.facebook.com/master.fakhri" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a class="social-btn" href="https://twitter.com/Dzulfakhri8201" target="_blank" rel="noopener" title="Twitter / X" aria-label="Twitter profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="social-btn" href="https://www.linkedin.com/in/dzulfikar-fakhri-azmi-196690196/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- ══ END PROFILE CARD ══ -->
+
+  </section>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════
+     ABOUT
+     ════════════════════════════════════════════════════════ -->
+<section class="section section--light" id="about" aria-label="About me">
+  <div class="inner">
+    <div class="section-label reveal">About</div>
+    <h2 class="section-title reveal">About Myself</h2>
+    <p class="about-text reveal">
+      A Research Engineer at PT Infoglobal Teknologi Semesta with experience in research and development of avionics, embedded systems, and electronic devices. Bachelor of Engineering from Sepuluh Nopember Institute of Technology (ITS) majoring in Electrical and Electronic Engineering, graduated with a <strong>cumlaude</strong> predicate (GPA 3.74/4.00).
+      <br><br>
+      A hard working and highly motivated person, enjoying working in a diverse environment, always willing to learn, and looking forward to new challenges. Involved in professional projects such as aircraft data computer, aircraft inertial navigation system, aircraft cockpit display, pilot helmet display, and avionics communication databuses using MIL-STD-1553. During college, contributed to research on virtual power plant, electric bike, and the Merah Putih tablet. Active in the microelectronics laboratory as well as student and professional organizations. Has a deep desire to learn new things, especially those related to the aerospace and electronics industry.
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     CAREER — Experience / Education Toggle
+     ════════════════════════════════════════════════════════ -->
+<section class="section section--white" id="career" aria-label="Career and education">
+  <div class="inner">
+    <div class="section-label reveal">Career</div>
+    <h2 class="section-title reveal">Experience &amp; Education</h2>
+
+    <!-- Tab switcher -->
+    <div class="timeline-tabs reveal" id="timelineTabs" role="tablist" aria-label="Experience or Education">
+      <button class="tab-btn active"
+              data-tab="panel-experience"
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-experience">
+        Work Experience
+      </button>
+      <button class="tab-btn"
+              data-tab="panel-education"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-education">
+        Education
+      </button>
+    </div>
+
+    <!-- ── Experience Panel ── -->
+    <div class="tab-panel active" id="panel-experience" role="tabpanel" aria-label="Work experience">
+      <div class="exp-grid">
+
+        <div class="exp-card reveal">
+          <div class="exp-card__company">PT Infoglobal Teknologi Semesta · Surabaya</div>
+          <div class="exp-card__role">Research Engineer</div>
+          <div class="exp-card__date"><span class="current-dot"></span> Jul 2023 — Present</div>
+          <p class="exp-card__desc">Research and develop aircraft cockpit Multi Function Display (MFD) for fixed-wing and helicopter platforms. Developed IMU sensor integration and OpenGL software for the Helmet Mounted Display System (HMDS). Built Aircraft Air Data Computer using .NET MAUI and implemented avionics MIL-STD-1553 databus. Researched FPGA on Zynq ZCU104 for video processing.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card__company">ITS — Virtual Power Plant Project · Surabaya</div>
+          <div class="exp-card__role">Research Assistant</div>
+          <div class="exp-card__date">Oct 2022 — Jan 2023</div>
+          <p class="exp-card__desc">Designed a solar power plant grid monitoring system using SCADA, Modbus TCP/IP, and OPC Unified Architecture. Integrated the power plant with an IoT server and implemented an electrical load monitoring system using LoRaWAN and MQTT communication protocol.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card__company">PT ITS Tekno Sains · Surabaya</div>
+          <div class="exp-card__role">Hardware Engineer Intern</div>
+          <div class="exp-card__date">Feb 2022 — Jul 2022</div>
+          <p class="exp-card__desc">Studied the electronics industrial ecosystem, laptop manufacturing process, and company business process. Prepared software injection systems for tablet manufacturing and analysed laptop power supply modules using reverse engineering methodology and motherboard block diagrams.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card__company">PT Telkom Indonesia · Bandung</div>
+          <div class="exp-card__role">IoT Engineer Intern</div>
+          <div class="exp-card__date">Jan 2022 — Mar 2022</div>
+          <p class="exp-card__desc">Developed a power meter data acquisition system and electrical load monitoring system based on IoT. Implemented data transmission using ESP32 LoRa and WiFi to an IoT cloud platform, along with HTTP and MQTT protocols for cloud-based electrical monitoring.</p>
+        </div>
+
+        <!-- <div class="exp-card reveal">
+          <div class="exp-card__company">IEEE ITS Student Branch · Surabaya</div>
+          <div class="exp-card__role">Educational Development Staff</div>
+          <div class="exp-card__date">Mar 2021 — Dec 2021</div>
+          <p class="exp-card__desc">Conducted Python and machine learning training for engineering faculty students. Prepared competition guidebooks for regional and international IEEE events. Built and maintained the IEEE ITS Student Branch profile website.</p>
+        </div> -->
+
+      </div>
+    </div><!-- /panel-experience -->
+
+    <!-- ── Education Panel ── -->
+    <div class="tab-panel" id="panel-education" role="tabpanel" aria-label="Education">
+      <div class="edu-grid">
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          </div>
+          <div class="edu-card__body">
+            <div class="edu-card__school">Institut Teknologi Sepuluh Nopember (ITS)</div>
+            <div class="edu-card__degree">Bachelor of Electrical Engineering</div>
+            <div class="edu-card__meta">
+              <span class="edu-meta-pill">2019 – 2023</span>
+              <span class="edu-meta-pill">GPA 3.74 / 4.00</span>
+              <span class="edu-meta-pill">Surabaya, East Java</span>
+              <span class="edu-meta-pill honor">✦ Cumlaude</span>
             </div>
-        </header>
-        <!--================Header Menu Area =================-->
-        
-        <!--================Home Banner Area =================-->
-        <section id="banner" class="home_banner_area">
-           	<div class="container box_1620">
-           		<div class="banner_inner d-flex align-items-center">
-					<div class="banner_content">
-						<div class="media">
-							<div class="d-flex">
-								<img src="img/foto profil.jpg" alt="Foto Profilku">
-							</div>
-							<div class="media-body">
-								<div class="personal_text">
-									<h6>Hello Everybody, i am</h6>
-									<h3>Dzulfikar Fakhri Azmi</h3>
-									<h4>Research Engineer</h4>
-									<p>Nice to meet you, welcome to my personal website. Enjoy this page and feel free to contact me. Thank you for your visit. </p>
-									<ul class="list basic_info">
-										<!-- <li><a href="#"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
-										<li><a href="#"><i class="lnr lnr-phone-handset"></i> 44 (012) 6954 783</a></li> -->
-										<li><a href="mailto:dzulfakhri8201@gmail.com" target="_blank"><i class="lnr lnr-envelope"></i> dzulfakhri8201@gmail.com</a></li>
-										<li><a href="https://goo.gl/maps/beUWyA6RnDhJ9rJ46" target="_blank"><i class="lnr lnr-home"></i> Jl. Karangan Mulya 1/22</a></li>
-									</ul>
-									<ul class="list personal_social">
-										<li><a href="https://www.instagram.com/dzulfi_fakhri/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-										<li><a href="https://www.facebook.com/master.fakhri" target="_blank"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="https://twitter.com/Dzulfakhri8201" target="_blank"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="https://www.linkedin.com/in/dzulfikar-fakhri-azmi-196690196/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+            <div class="edu-card__thesis">
+              Thesis: <em>"Design and Prototype of Irrigation Water Demand Mapping System in Real Time Based on K-Means Clustering Method"</em>
             </div>
-        </section>
-        <!--================End Home Banner Area =================-->
-        
-        <!--================About Area =================-->
-        <section id="about" class="welcome_area p_120">
-        	<div class="container">
-        		<div class="row welcome_inner">
-        			<div class="col-lg-6">
-        				<div class="welcome_text">
-        					<h4>About Myself</h4>
-        					<p style="text-align: justify;">A Fresh Graduate of Electrical Engineering from Sepuluh Nopember Institute of Technology who focuses on the field of electronics studies. A hard working and highly motivated person, enjoy working in a diverse environment, always willing to learn, and looking forward for the new challenge. Have a desire to learn new things, especially those related to Industrial Electronics, Supervisory Control and Data Acquisition (SCADA), Internet of Things (IoT), Embedded System, Artificial Intelligence, Power Electronics, and other technologies. Also has knowledge about website development, mobile technology, digital and analog electronic systems, semiconductor devices and integrated circuits (IC), Programmable Logic Devices (PLD), and other knowledge about electronics.</p>
-        					<!-- <div class="row">
-        						<div class="col-md-4">
-        							<div class="wel_item">
-        								<i class="lnr lnr-database"></i>
-        								<h4>$2.5M</h4>
-        								<p>Total Donation</p>
-        							</div>
-        						</div>
-        						<div class="col-md-4">
-        							<div class="wel_item">
-        								<i class="lnr lnr-book"></i>
-        								<h4>1465</h4>
-        								<p>Total Projects</p>
-        							</div>
-        						</div>
-        						<div class="col-md-4">
-        							<div class="wel_item">
-        								<i class="lnr lnr-users"></i>
-        								<h4>3965</h4>
-        								<p>Total Volunteers</p>
-        							</div>
-        						</div>
-        					</div> -->
-        				</div>
-        			</div>
-        			<div class="col-lg-6">
-        				<div class="tools_expert">
-        					<div class="skill_main">
-								<div class="skill_item">
-									<h4>Internet of Things </h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill_item">
-									<h4>SCADA </h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill_item">
-									<h4>Embedded System </h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill_item">
-									<h4>Image Processing </h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill_item">
-									<h4>Machine Learning and Artificial Intelligence </h4>
-									<div class="progress_br">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================About Area =================-->
-        
-        <!--================My Tabs Area =================-->
-        <section id="tab" class="mytabs_area p_120">
-        	<div class="container">
-        		<div class="tabs_inner">
-					<ul class="nav nav-tabs" id="myTab" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Experiences</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Education</a>
-						</li>
-					</ul>
-					<div class="tab-content" id="myTabContent">
-						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-							<ul class="list">
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex" style="padding-right: 90px;">
-											<p>Dec 2020 to May 2021</p>
-										</div>
-										<div class="media-body">
-											<h4>Evolution ITS</h4>
-											<p>Web Developer <br />Surabaya, Indonesia</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex" style="padding-right: 80px;">
-											<p>March 2021 to Dec 2021</p>
-										</div>
-										<div class="media-body">
-											<h4>IEEE ITS Student Branch</h4>
-											<p>Educational Development Staff<br />Surabaya, Indonesia</p>
-										</div>
-									</div>
-								</li>
-								<li>
-								<span></span>
-									<div class="media">
-										<div class="d-flex">
-											<p>Sep 2021 to March 2023</p>
-										</div>
-										<div class="media-body">
-											<h4>Microelectronics and Embedded System Laboratory</h4>
-											<p>Assistant Laboratory <br />Surabaya, Indonesia</p>
-										</div>
-									</div>
-								</li>
-								<li>
-								<span></span>
-									<div class="media">
-										<div class="d-flex" style="padding-right: 120px;">
-											<p>Jan to March 2022</p>
-										</div>
-										<div class="media-body">
-											<h4>PT. Telkom Indonesia</h4>
-											<p>IoT Engineer <br />Bandung, Indonesia</p>
-										</div>
-									</div>
-								</li>
-								<li>
-								<span></span>
-									<div class="media">
-										<div class="d-flex" style="padding-right: 140px;">
-											<p>Feb to Jul 2022</p>
-										</div>
-										<div class="media-body">
-											<h4>PT. ITS Tekno Sains</h4>
-											<p>Hardware Engineer <br />Surabaya, Indonesia</p>
-										</div>
-									</div>
-								</li>
-								<li>
-								<span></span>
-									<div class="media">
-										<div class="d-flex" style="padding-right: 140px;">
-											<p>Jul 2023 until now</p>
-										</div>
-										<div class="media-body">
-											<h4>PT. Infoglobal Teknologi Semesta</h4>
-											<p>Research Engineer <br />Surabaya, Indonesia</p>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-							<ul class="list">
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex education">
-											<p>2007 to 2013</p>
-										</div>
-										<div class="media-body">
-											<h4>SDIT At-Taqwa Surabaya</h4>
-										</div>
-									</div>
-								</li>
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex education">
-											<p>2013 to 2016</p>
-										</div>
-										<div class="media-body">
-											<h4>SMP Negeri 1 Surabaya</h4>
-										</div>
-									</div>
-								</li>
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex education">
-											<p>2016 to 2019</p>
-										</div>
-										<div class="media-body">
-											<h4>SMA Negeri 2 Surabaya</h4>
-											<p>Mathematic and Sciences</p>
-										</div>
-									</div>
-								</li>
-								<li>
-									<span></span>
-									<div class="media">
-										<div class="d-flex education">
-											<p>2019 to 2023</p>
-										</div>
-										<div class="media-body">
-											<h4>Institut Teknologi Sepuluh Nopember</h4>
-											<p>Electrical Engineering</p>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================End My Tabs Area =================-->
-        
-        <!--================Portfolio Area =================-->
-        <section id="portfolio" class="feature_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Portfolio</h2>
-        			<!-- <p>If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p> -->
-        		</div>
-        		<div class="feature_inner row">
-        			<div class="col-lg-4 col-md-6">
-        				<div class="feature_item">
-        					<!-- <i class="flaticon-city"></i> -->
-        					<h4>IoT Engineer</h4>
-        					<p style="text-align: justify;">As IoT Engineer at PT. Telkom Indonesia, I studyied the use of IoT technology in industry(manufacturing, troubleshooting, and business models). I also developed a power meter data acquisition system and an electrical load monitoring system based on IoT. The system is sending electrical load data from the power meter to the IoT platform using ESP32 Long Range (LoRa) and ESP32 WiFi technology. The system is also sending electrical load data from the power meter to the IoT platform using HTTP and MQTT protocol. </p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="feature_item">
-        					<!-- <i class="flaticon-skyline"></i> -->
-        					<h4>Hardware Engineer</h4>
-        					<p style="text-align: justify;">As Hardware Engineer at PT. ITS Tekno Sains, I Studied electronics industrial ecosystem, laptop manufacturing process, and business process of electronics company. I also prepared system for software and learning module injection to the tablet during manufacturing process. I designed power supply module for laptop using flyback converter topology and reverse engineering methodology. And then I analyzed laptop motherboard block diagram, chip that used in the motherboard, and wiring connection. </p>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-6">
-        				<div class="feature_item">
-        					<!-- <i class="flaticon-sketch"></i> -->
-        					<h4>Research Assistant</h4>
-        					<p style="text-align: justify;">I became Research Assistant at Virtual Power Plant research project that conducted by ITS, PT. PJB, and Kedaireka. I designed system that monitor solar power plant grid connection using SCADA, modbus TCP/IP protocol, and OPC Unified Architecture. I also integrated solar power plant with Internet of Things Server using various communication protocol. I implemented data acquisition system for industrial power meter using modbus RTU protocol. And then I implemented electrical load monitoring system using LoRaWAN and MQTT communication protocol. </p>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <!--================Portfolio Area =================-->
-        
-        <!--================Sertification Area =================-->
-        <!-- <section class="home_gallery_area p_120">
-        	<div class="container">
-        		<div class="main_title">
-        			<h2>Our Latest Featured Projects</h2>
-        			<p>Who are in extremely love with eco friendly system.</p>
-        		</div>
-        		<div class="isotope_fillter">
-        			<ul class="gallery_filter list">
-						<li class="active" data-filter="*"><a href="#">All</a></li>
-						<li data-filter=".brand"><a href="#">Vector</a></li>
-						<li data-filter=".manipul"><a href="#">Raster</a></li>
-						<li data-filter=".creative"><a href="#">UI/UX</a></li>
-						<li data-filter=".design"><a href="#">Printing</a></li>
-					</ul>
-        		</div>
-        	</div>
-        	<div class="container">
-        		<div class="gallery_f_inner row imageGallery1">
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-1.jpg" alt="">
-        						<a class="light" href="img/gallery/project-1.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>3D Helmet Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul creative">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-2.jpg" alt="">
-        						<a class="light" href="img/gallery/project-2.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>2D Vinyl Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 manipul creative design print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-3.jpg" alt="">
-        						<a class="light" href="img/gallery/project-3.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Creative Poster Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative print">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-4.jpg" alt="">
-        						<a class="light" href="img/gallery/project-4.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>Embosed Logo Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-5.jpg" alt="">
-        						<a class="light" href="img/gallery/project-5.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>3D Disposable Bottle</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative">
-        				<div class="h_gallery_item">
-        					<div class="g_img_item">
-        						<img class="img-fluid" src="img/gallery/project-6.jpg" alt="">
-        						<a class="light" href="img/gallery/project-6.jpg"><img src="img/gallery/icon.png" alt=""></a>
-        					</div>
-        					<div class="g_item_text">
-        						<h4>3D Logo Design</h4>
-        						<p>Client Project</p>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        		<div class="more_btn">
-        			<a class="main_btn" href="#">Load More Items</a>
-        		</div>
-        	</div>
-        </section> -->
-        <!--================Sertification Area =================-->
-        
-        <!--================Footer Area =================-->
-        <footer class="footer_area p_120">
-        	<div class="container">
-        		<div class="row footer_inner">
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget ab_widget">
-        					<div class="f_title">
-        						<h3>About Me</h3>
-        					</div>
-        					<p>Nice to meet you, my name is Dzulfikar Fakhri Azmi <br> you can call me Dzul or Fakhri.</p>
-        					<!-- <p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-        				</aside>
-        			</div>
-        			<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget news_widget">
-        					<div class="f_title">
-        						<h3>My Location</h3>
-        					</div>
-        					<ul class="list basic_info">
-								<!-- <li><a href="#"><i class="lnr lnr-calendar-full"></i> 31st December, 1992</a></li>
-								<li><a href="#"><i class="lnr lnr-phone-handset"></i> 44 (012) 6954 783</a></li> -->
-								<li><i class="fa fa-home"></i><span style="padding-left: 10px;">Jl. Karangan Mulya 1/22</span></li>
-								<li><i class="fa fa-map-marker" style="padding-left: 2px;"></i><span style="padding-left: 13px;">Surabaya</span></li>
-							</ul>
-        				</aside>
-        			</div>
-        			<div class="col-lg-2">
-        				<aside id="socmed" class="f_widget social_widget">
-        					<div class="f_title">
-        						<h3>Follow Me</h3>
-        					</div>
-        					<p>Let us be social</p>
-        					<ul class="list">
-        						<li><a href="https://www.facebook.com/master.fakhri"><i class="fa fa-facebook"></i></a></li>
-        						<li><a href="https://twitter.com/Dzulfakhri8201"><i class="fa fa-twitter"></i></a></li>
-        						<li><a href="https://www.instagram.com/dzulfi_fakhri/"><i class="fa fa-instagram"></i></a></li>
-        						<li><a href="https://www.linkedin.com/in/dzulfikar-fakhri-azmi-196690196/"><i class="fa fa-linkedin"></i></a></li>
-        					</ul>
-        				</aside>
-        			</div>
-        		</div>
-        	</div>
-        </footer>
-        <!--================End Footer Area =================-->
-        
-        
-        
-        
-        
-        
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="js/theme.js"></script>
-    </body>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          </div>
+          <div class="edu-card__body">
+            <div class="edu-card__school">SMAN 2 Surabaya</div>
+            <div class="edu-card__degree">Senior High School</div>
+            <div class="edu-card__meta">
+              <span class="edu-meta-pill">2016 – 2019</span>
+            </div>
+            <div class="edu-card__thesis">
+              Subject: Science Major (Mathematics, Physics, Chemistry, Biology)
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          </div>
+          <div class="edu-card__body">
+            <div class="edu-card__school">SMPN 1 Surabaya</div>
+            <div class="edu-card__degree">Junior High School</div>
+            <div class="edu-card__meta">
+              <span class="edu-meta-pill">2013 – 2016</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+          </div>
+          <div class="edu-card__body">
+            <div class="edu-card__school">SDIT AT-Taqwa</div>
+            <div class="edu-card__degree">Elementary School</div>
+            <div class="edu-card__meta">
+              <span class="edu-meta-pill">2007 – 2013</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="edu-card reveal">
+          <div class="edu-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          </div>
+          <div class="edu-card__body">
+            <div class="edu-card__school">Various Certifications & Training</div>
+            <div class="edu-card__degree">Professional Development</div>
+            <div class="edu-card__meta">
+              <span class="edu-meta-pill">2021 – 2023</span>
+            </div>
+            <div class="edu-card__thesis">
+              TOEFL ITP (510) · IBM IT Fundamentals · Intel Semiconductor Literacy · Xilinx MPSoC HUBI Architecture (Infoglobal) · DataCamp Python (Intro + Intermediate) · Dicoding Machine Learning Development · Dicoding Data Visualisation
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+    </div><!-- /panel-education -->
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     GALLERY CAROUSEL — Project Documentation
+     ════════════════════════════════════════════════════════ -->
+<section class="gallery-section" id="gallery" aria-label="Project gallery">
+  <div class="inner">
+    <div class="section-label reveal">Gallery</div>
+    <h2 class="section-title reveal">Documentation</h2>
+
+    <div class="carousel-wrapper reveal" id="mainCarousel" aria-label="Project documentation carousel">
+
+      <!-- Prev button -->
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <!-- Track -->
+      <div class="carousel-track-window">
+        <div class="carousel-track" role="list">
+
+          <div class="carousel-slide" role="listitem">
+            <!-- <div class="carousel-slide__placeholder">IoT Smart Farming LoRaWAN</div> -->
+            <img src="img/lorawan.jpg" alt="IoT Smart Farming LoRaWAN" class="carousel-slide__media">
+            <div class="carousel-slide__caption">
+              <div class="carousel-slide__category">IoT · Agriculture · Thesis Project</div>
+              <div class="carousel-slide__title">IoT Smart Farming — LoRaWAN Network</div>
+              <p class="carousel-slide__desc">Prototype of a smart irrigation system using LoRaWAN, MQTT, and K-means clustering to map soil moisture and automate water valve control across farm zones.</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide" role="listitem">
+            <!-- <div class="carousel-slide__placeholder">INS / HMDS System</div> -->
+            <img src="img/hmds.png" alt="INS / HMDS System" class="carousel-slide__media">
+            <div class="carousel-slide__caption">
+              <div class="carousel-slide__category">Avionics · Sensors · Display Systems</div>
+              <div class="carousel-slide__title">INS Heading Reference for HMDS</div>
+              <p class="carousel-slide__desc">AHRS-based heading reference on ESP32 reading IMU raw data and computing yaw, pitch, roll for real-time image transformation on a pilot helmet display visor.</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide" role="listitem">
+            <!-- <div class="carousel-slide__placeholder">RF PCB Bandpass Filter</div> -->
+            <img src="img/rf_pcb.png" alt="RF PCB Bandpass Filter" class="carousel-slide__media">
+            <div class="carousel-slide__caption">
+              <div class="carousel-slide__category">PCB Design · RF Engineering</div>
+              <div class="carousel-slide__title">RF PCB — 150 MHz Bandpass Filter</div>
+              <p class="carousel-slide__desc">RF signal receiver PCB with coplanar waveguide transmission lines designed in KiCad. Implements controlled impedance, ground plane separation, and via stitching for clean RF performance.</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide" role="listitem">
+            <!-- <div class="carousel-slide__placeholder">IoT Aquaponic Monitor</div> -->
+            <img src="img/aquaponic.jpg" alt="IoT Smart Aquaponic Monitoring" class="carousel-slide__media">
+            <div class="carousel-slide__caption">
+              <div class="carousel-slide__category">IoT · Aquaponics · Android App</div>
+              <div class="carousel-slide__title">IoT Smart Aquaponic Monitoring</div>
+              <p class="carousel-slide__desc">Complete IoT system monitoring PH, TDS, temperature, and water level with live ESP32-CAM streaming to a custom Android app via HTTP and JSON API on local network.</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide" role="listitem">
+            <!-- <div class="carousel-slide__placeholder">Autism Detection System</div> -->
+            <img src="img/hand_flap.jpg" alt="Autism Detection System" class="carousel-slide__media">
+            <div class="carousel-slide__caption">
+              <div class="carousel-slide__category">Embedded · Health Technology</div>
+              <div class="carousel-slide__title">Autism Detection — Hand Flapping Analysis</div>
+              <p class="carousel-slide__desc">STM32-based wearable applying Kalman filter and FFT to detect autism-related repetitive hand movements by measuring flapping frequency from accelerometer and gyroscope data.</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide" role="listitem">
+            <!-- <div class="carousel-slide__placeholder">Brake Failure Warning System</div> -->
+            <img src="img/truck.jpg" alt="Brake Failure Warning System" class="carousel-slide__media">
+            <div class="carousel-slide__caption">
+              <div class="carousel-slide__category">Embedded · Vehicle Safety · IoT</div>
+              <div class="carousel-slide__title">Truck Brake Failure Warning System</div>
+              <p class="carousel-slide__desc">ESP32 system monitoring brake lining temperature and road slope via IMU and optocoupler sensors, triggering multi-mode alerts and Blynk mobile push notifications through GSM modem.</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide" role="listitem">
+            <!-- <div class="carousel-slide__placeholder">USB Fast Charging PCB</div> -->
+            <img src="img/fast_charging.png" alt="USB Fast Charging PCB" class="carousel-slide__media">
+            <div class="carousel-slide__caption">
+              <div class="carousel-slide__category">PCB Design · Power Electronics</div>
+              <div class="carousel-slide__title">USB Fast Charging — Dual Port Device</div>
+              <p class="carousel-slide__desc">Custom PCB designed in EasyEDA featuring a USB Power Delivery IC supporting Apple, Samsung, and OPPO fast-charging protocols with dual USB-A and USB-C output from 12/24V input.</p>
+            </div>
+          </div>
+
+          <!-- <div class="carousel-slide" role="listitem">
+            <div class="carousel-slide__placeholder">Toddler BMI Monitor</div>
+            <div class="carousel-slide__caption">
+              <div class="carousel-slide__category">Embedded · Health · Python GUI</div>
+              <div class="carousel-slide__title">Toddler BMI &amp; Nutrition Assessment</div>
+              <p class="carousel-slide__desc">ESP32 device measuring toddler weight via load cell and height via ultrasonic sensor. Data transmitted over Bluetooth to a Tkinter GUI application that computes nutrition level using fuzzy logic.</p>
+            </div>
+          </div> -->
+
+        </div><!-- /carousel-track -->
+      </div><!-- /carousel-track-window -->
+
+      <!-- Next button -->
+      <button class="carousel-btn carousel-btn--next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Dots -->
+      <div class="carousel-dots" role="tablist" aria-label="Slide indicators"></div>
+
+      <!-- Counter -->
+      <div class="carousel-counter" aria-live="polite" aria-atomic="true">
+        <span>1</span> / 8
+      </div>
+
+      <!-- Thumbnails (desktop) -->
+      <!-- <div class="carousel-thumbs" role="list" aria-label="Slide thumbnails"></div> -->
+
+      <!-- Swipe hint (mobile) -->
+      <div class="carousel-hint" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        Swipe to navigate
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </div>
+
+    </div><!-- /carousel-wrapper -->
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     PORTFOLIO
+     ════════════════════════════════════════════════════════ -->
+<section class="section section--light" id="portfolio" aria-label="Portfolio">
+  <div class="inner">
+    <div class="section-label reveal">Projects</div>
+    <h2 class="section-title reveal">Portfolio</h2>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__title">IoT Smart Farming LoRaWAN</div>
+        <p class="portfolio-card__desc">Real-time soil moisture monitoring across irrigation zones using LoRaWAN, MQTT, and K-means clustering for automated solenoid valve control. Final undergraduate thesis project at ITS.</p>
+        <div class="portfolio-card__tags">
+          <span class="portfolio-tag">Arduino Mega</span><span class="portfolio-tag">LoRaWAN</span><span class="portfolio-tag">MQTT</span><span class="portfolio-tag">K-Means</span><span class="portfolio-tag">SQLite</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__title">INS Heading Reference — HMDS</div>
+        <p class="portfolio-card__desc">IMU-based heading reference for a Helmet Mounted Display using AHRS sensor fusion to compute yaw, pitch, and roll angles for real-time image transformation on the visor.</p>
+        <div class="portfolio-card__tags">
+          <span class="portfolio-tag">ESP32</span><span class="portfolio-tag">IMU</span><span class="portfolio-tag">AHRS</span><span class="portfolio-tag">OpenGL</span><span class="portfolio-tag">Avionics</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__title">RF PCB — Bandpass Filter</div>
+        <p class="portfolio-card__desc">RF signal receiver PCB with 150 MHz bandpass filter using coplanar waveguide transmission lines in KiCad, with impedance control, signal integrity, and via stitching.</p>
+        <div class="portfolio-card__tags">
+          <span class="portfolio-tag">KiCad</span><span class="portfolio-tag">RF Design</span><span class="portfolio-tag">CPW</span><span class="portfolio-tag">Signal Integrity</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__title">IoT Smart Aquaponic</div>
+        <p class="portfolio-card__desc">Full IoT monitoring of PH, TDS, temperature, and water level with live ESP32-CAM streaming to an Android app via HTTP on a local network. Responses returned in JSON format.</p>
+        <div class="portfolio-card__tags">
+          <span class="portfolio-tag">ESP32-CAM</span><span class="portfolio-tag">HTTP</span><span class="portfolio-tag">Android</span><span class="portfolio-tag">JSON API</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__title">Electrical Load Monitor — Blynk</div>
+        <p class="portfolio-card__desc">Industrial power meter monitoring via Modbus RS485 on ESP32, forwarding data to Blynk cloud through a GSM modem. Deployed for real-world industrial power monitoring.</p>
+        <div class="portfolio-card__tags">
+          <span class="portfolio-tag">ESP32</span><span class="portfolio-tag">Modbus RS485</span><span class="portfolio-tag">Blynk IoT</span><span class="portfolio-tag">MQTT</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__title">Autism Detection — Flapping Hand</div>
+        <p class="portfolio-card__desc">STM32 wearable using Kalman filter and FFT on accelerometer/gyroscope data to detect repetitive hand-flapping frequency associated with autism, transmitted to PC via Bluetooth.</p>
+        <div class="portfolio-card__tags">
+          <span class="portfolio-tag">STM32</span><span class="portfolio-tag">Kalman Filter</span><span class="portfolio-tag">FFT</span><span class="portfolio-tag">Bluetooth</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__title">Brake Failure Warning System</div>
+        <p class="portfolio-card__desc">ESP32-based truck brake monitor detecting failure via IMU and optocoupler sensors, triggering LEDs, buzzers, and external sirens with Blynk mobile push notifications.</p>
+        <div class="portfolio-card__tags">
+          <span class="portfolio-tag">ESP32</span><span class="portfolio-tag">IMU</span><span class="portfolio-tag">Blynk</span><span class="portfolio-tag">GSM Modem</span>
+        </div>
+      </div>
+
+      <div class="portfolio-card reveal">
+        <div class="portfolio-card__title">Toddler BMI &amp; Nutrition Monitor</div>
+        <p class="portfolio-card__desc">ESP32 measuring toddler weight (load cell) and height (ultrasonic), sending via Bluetooth to a Python Tkinter GUI that calculates nutrition and obesity level using fuzzy logic.</p>
+        <div class="portfolio-card__tags">
+          <span class="portfolio-tag">ESP32</span><span class="portfolio-tag">Python</span><span class="portfolio-tag">Tkinter</span><span class="portfolio-tag">Fuzzy Logic</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     SKILLS
+     ════════════════════════════════════════════════════════ -->
+<section class="section section--white" id="skills" aria-label="Technical skills">
+  <div class="inner">
+    <div class="section-label reveal">Expertise</div>
+    <h2 class="section-title reveal">Technical Skills</h2>
+    <div class="skills-chips">
+      <span class="skill-chip featured">Avionics Systems</span>
+      <span class="skill-chip featured">Embedded Systems</span>
+      <span class="skill-chip featured">IoT Development</span>
+      <span class="skill-chip featured">C / C++</span>
+      <span class="skill-chip featured">PCB Design</span>
+      <span class="skill-chip featured">STM32</span>
+      <span class="skill-chip featured">ESP32</span>
+      <span class="skill-chip featured">Atmel AVR</span>
+      <span class="skill-chip featured">Arduino</span>
+      <span class="skill-chip featured">INS/GPS</span>
+      <span class="skill-chip">FPGA / Zynq</span>
+      <span class="skill-chip">C# / .NET MAUI</span>
+      <span class="skill-chip">Python</span>
+      <span class="skill-chip">Linux</span>
+      <span class="skill-chip">MIL-STD-1553</span>
+      <span class="skill-chip">OpenGL</span>
+      <span class="skill-chip">KiCad</span>
+      <span class="skill-chip">EasyEDA</span>
+      <span class="skill-chip">Eagle</span>
+      <span class="skill-chip">MATLAB</span>
+      <span class="skill-chip">LTSpice</span>
+      <span class="skill-chip">Proteus</span>
+      <span class="skill-chip">Multisim</span>
+      <span class="skill-chip">SCADA</span>
+      <span class="skill-chip">Modbus TCP/IP &amp; RTU</span>
+      <span class="skill-chip">LoRaWAN</span>
+      <span class="skill-chip">MQTT</span>
+      <span class="skill-chip">WebSocket / HTTP</span>
+      <span class="skill-chip">Bluetooth LE</span>
+      <span class="skill-chip">OpenCV</span>
+      <span class="skill-chip">TensorFlow</span>
+      <span class="skill-chip">Keras</span>
+      <span class="skill-chip">PyTorch</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER (original design, unchanged)
+     ════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="inner">
+    <div class="footer-inner">
+
+      <div class="footer-col footer-col-1">
+        <div class="footer-col__title">About Me</div>
+        <p class="footer-col__text">
+          Nice to meet you, my name is Dzulfikar Fakhri Azmi, you can call me Dzul or Fakhri.
+        </p>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <div class="footer-col__title">My Location</div>
+        <div class="footer-location-row">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Jl. Karangan Mulya 1/22
+        </div>
+        <div class="footer-location-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Surabaya
+        </div>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <div class="footer-col__title" style="font-size:0.9rem;margin-bottom:0.3rem;">Follow Me</div>
+        <p class="footer-follow-label">Let us be social</p>
+        <div class="footer-socials">
+          <a class="footer-social-link" href="https://www.facebook.com/master.fakhri" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a class="footer-social-link" href="https://twitter.com/Dzulfakhri8201" target="_blank" rel="noopener" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="footer-social-link" href="https://www.instagram.com/dzulfi_fakhri/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <a class="footer-social-link" href="https://www.linkedin.com/in/dzulfikar-fakhri-azmi-196690196/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Dzulfikar Fakhri Azmi · Research Engineer · Surabaya, Indonesia
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════════════
+     MODULAR JS — order matters (dependencies first)
+     ════════════════════════════════════════════════════════ -->
+<script src="js/reveal.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/app.js"></script>
+
+</body>
 </html>

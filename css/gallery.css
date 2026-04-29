@@ -1,0 +1,313 @@
+/* ============================================================
+   gallery.css — Portfolio cards & Gallery Carousel
+   ============================================================ */
+
+/* ─────────────────────────────────────────────────────────────
+   PORTFOLIO CARDS GRID
+   ───────────────────────────────────────────────────────────── */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.portfolio-card {
+  background: var(--clr-bg-white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--clr-border);
+  transition: box-shadow var(--transition-med), transform var(--transition-med);
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+
+.portfolio-card__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--clr-text-primary);
+  margin-bottom: 0.8rem;
+}
+
+.portfolio-card__desc {
+  font-size: 0.82rem;
+  color: var(--clr-text-body);
+  line-height: 1.75;
+  text-align: justify;
+  flex: 1;
+}
+
+.portfolio-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: var(--space-md);
+}
+
+.portfolio-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  background: var(--clr-accent-pale);
+  color: var(--clr-accent);
+  border-radius: 3px;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   GALLERY CAROUSEL
+   ───────────────────────────────────────────────────────────── */
+.gallery-section {
+  background: var(--clr-bg-dark);
+  padding: var(--space-2xl) 0;
+  overflow: hidden;
+}
+
+.gallery-section .section-label { color: #7a8fdd; }
+.gallery-section .section-title { color: var(--clr-text-white); }
+
+.carousel-wrapper {
+  position: relative;
+  margin-top: var(--space-xl);
+  user-select: none;
+}
+
+/* The visible track window */
+.carousel-track-window {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+/* Sliding strip of slides */
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Individual slide */
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+  background: #111;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.carousel-slide__media {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: #1a1a2e;
+}
+
+/* Placeholder for slides without a real image */
+.carousel-slide__placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.18);
+  background: linear-gradient(135deg, #1a1a2e 0%, #0d1530 100%);
+}
+
+/* Caption overlay */
+.carousel-slide__caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.75rem 2rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.55) 60%, transparent 100%);
+}
+
+.carousel-slide__category {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-accent-light);
+  margin-bottom: 0.3rem;
+}
+
+.carousel-slide__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--clr-text-white);
+  margin-bottom: 0.4rem;
+  line-height: 1.15;
+}
+
+.carousel-slide__desc {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+  max-width: 640px;
+}
+
+/* ── Navigation arrows ── */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.carousel-btn:hover {
+  background: var(--clr-accent);
+  border-color: var(--clr-accent);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.carousel-btn--prev { left: -1rem; }
+.carousel-btn--next { right: -1rem; }
+
+/* ── Dot indicators ── */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-med), transform var(--transition-med), width var(--transition-med);
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: var(--clr-accent-light);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ── Slide counter ── */
+.carousel-counter {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.35);
+  text-align: right;
+  margin-top: 0.75rem;
+}
+
+.carousel-counter span { color: rgba(255,255,255,0.75); }
+
+/* ── Thumbnail strip (desktop) ── */
+.carousel-thumbs {
+  display: none;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}
+
+.carousel-thumb {
+  flex: 0 0 100px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color var(--transition-fast), opacity var(--transition-fast);
+  opacity: 0.5;
+  background: #111;
+}
+
+.carousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-thumb__label {
+  display: none;
+}
+
+.carousel-thumb.active {
+  border-color: var(--clr-accent);
+  opacity: 1;
+}
+
+.carousel-thumb:hover { opacity: 0.85; }
+
+@media (min-width: 768px) {
+  .carousel-thumbs { display: flex; }
+  .carousel-btn--prev { left: -1.5rem; }
+  .carousel-btn--next { right: -1.5rem; }
+}
+
+/* Swipe hint on mobile */
+.carousel-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  margin-top: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.carousel-hint svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+}
+
+@media (min-width: 768px) {
+  .carousel-hint { display: none; }
+}
